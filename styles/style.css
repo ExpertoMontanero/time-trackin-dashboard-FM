@@ -10,6 +10,7 @@
     --lime-green-exercise: hsl(145, 58%, 55%);
     --violet-social: hsl(264, 64%, 52%);
     --orange-self-care: hsl(43, 84%, 65%);
+    --white: rgba(254, 254, 254, 0.962);
 
     /* NEUTRAL */
     --very-dark-blue: hsl(226, 43%, 10%);
@@ -75,6 +76,7 @@ body {
     justify-content: center;
 }
 
+/* content positioning with grid system  */
 .grid {
     margin: auto;
     height: 35em;
@@ -85,11 +87,13 @@ body {
     gap: 1.5em;
 }
 
+/* single box of content */
 .box {
     aspect-ratio: 1/1;
     height: 100%;
 }
 
+/* user box of content (taking 2 grid rows) */
 #user-box {
     height: 100%;
     aspect-ratio: 1/2.1;
@@ -115,30 +119,34 @@ body {
     background-color: var(--blue);
 }
 
+/* blue user data container with photo and name */
 .user-data-container {
     width: 83%;
     height: 10em;
     margin-top: 3em;
 }
 
+/* user avatar */
 #user-photo {
     width: 5em;
     border: solid;
     border-radius: 50%;
-    border-color: #fff;
+    border-color: var(--white);
 }
 
+/* tex above user name */
 #report-text {
     margin-top: 3em;
     font-size: 15px;
     color: var(--pale-blue);
 }
 
+/* user name */
 #user-name {
     font-size: 2.5em;
     font-weight: 300;
     letter-spacing: 1px;
-    color: #fff;
+    color: var(--white);
 }
 
 /* time span picking section */
@@ -148,6 +156,7 @@ body {
     display: inline-block;
 }
 
+/* button for picking time span */
 .period-selector-btn {
     text-align: start;
     width: 100%;
@@ -159,9 +168,10 @@ body {
     color: var(--pale-blue);
 }
 
+/* active states */
 .period-selector-btn:hover,
 :focus {
-    color: #fff;
+    color: var(--white);
 }
 
 
@@ -172,8 +182,10 @@ body {
     width: 100%;
     height: 81%;
     background-color: var(--dark-blue);
+    padding: 1.7em;
 }
 
+/* box customization */
 .box {
     display: flex;
     align-items: end;
@@ -207,11 +219,46 @@ body {
     background-color: var(--orange-self-care);
 }
 
+/* individual icon for every box (on the right corner) */
 .icon {
     height: auto;
     position: absolute;
     right: 5%;
     top: -0.6em;
+}
+
+/* name of acitvity and icon line */
+.activity-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* name of activity */
+.activity-name {
+    font-size: 1.4em;
+    color: var(--white);
+    font-weight: 400;
+}
+
+/* 3 dot icon next to activity name */
+.ellipsis-icon {
+    width: 21px;
+    height: 5px;
+}
+
+/* time display */
+.time {
+    margin-top: 0.3em;
+    font-size: 4em;
+    font-weight: 300;
+    color: var(--white);
+}
+
+.time-info-line {
+    margin-top: 0.4em;
+    font-weight: 300;
+    color: var(--pale-blue);
 }
 
 /* MEDIA TABLET */
@@ -264,7 +311,7 @@ body {
         width: clamp(4.5em, 20%, 12em);
         border: solid;
         border-radius: 50%;
-        border-color: #fff;
+        border-color: var(--white);
     }
 
     .user-text {
@@ -285,7 +332,7 @@ body {
         font-size: clamp(1.7em, 4vw, 3.5em);
         font-weight: 300;
         letter-spacing: 1px;
-        color: #fff;
+        color: var(--white);
     }
 
     .lower-user-box {
@@ -295,12 +342,40 @@ body {
         margin: 0;
         aspect-ratio: 3.9/1;
         width: 100%;
-        font-size:clamp(1em,3.5vw,2em);
+        font-size: clamp(1em, 3.5vw, 2em);
     }
 
     .period-selector-btn {
         text-align: center;
         margin: 0;
+    }
+
+    .activity-line {
+        margin-top: -0.8em;
+    }
+
+    .activity-name {
+        font-size: 4.5vw;
+    }
+
+    .time {
+        margin-top: 0;
+        font-size: 10vw;
+        font-weight: 300;
+        color: var(--white);
+    }
+
+    .time-info-line {
+        display: flex;
+        align-items: center;
+        font-size: 3.5vw;
+    }
+
+    .mobile-time-display {
+        margin-top: 3em;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
     }
 }
 
@@ -331,6 +406,12 @@ body {
 
     #user-name {
         font-size: 1.3em;
+    }
+    .mobile-time-display {
+        margin-top: 1em;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
     }
 }
 
