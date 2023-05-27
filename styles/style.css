@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+
+    /* PRIMARY */
+    --blue: hsl(246, 80%, 60%);
+    --light-red-work: hsl(15, 100%, 70%);
+    --soft-blue-play: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --lime-green-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --orange-self-care: hsl(43, 84%, 65%);
+
+    /* NEUTRAL */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Positioning */
+body {
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    margin: auto;
+    height: 35em;
+    width: 70em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5em;
+}
+
+.box {
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+
+#user-box {
+    height: 100%;
+    aspect-ratio: 1/2.1;
+    grid-row: span 2;
+}
+
+/* BOXES CUSTOMIZATION */
+
+/* USER BOX CUSTOMIZATION */
+#user-box {
+    background-color: var(--dark-blue);
+    align-items: start;
+    border-radius: 1em;
+}
+
+/* User data section */
+.upper-user-box {
+    display: inline-block;
+    height: 65%;
+    width: 100%;
+    border-radius: 1em;
+    background-color: var(--blue);
+}
+
+/* time span picking section */
+.lower-user-box {
+    width: 100%;
+}
+
+/* COMMON BOXES CUSTOMIZATION */
+.box-content {
+    z-index: 1;
+    border-radius: 1em;
+    width: 100%;
+    height: 81%;
+    background-color: var(--dark-blue);
+}
+
+.box {
+    display: flex;
+    align-items: end;
+    position: relative;
+    border-radius: 1em;
+    overflow:auto;
+}
+
+/* individual containers */
+#work-container {
+    background-color: var(--light-red-work);
+}
+
+#play-container {
+    background-color: var(--soft-blue-play);
+}
+
+#study-container {
+    background-color: var(--light-red-study);
+}
+
+#exercise-container {
+    background-color: var(--lime-green-exercise);
+}
+
+#social-container {
+    background-color: var(--violet-social);
+}
+
+#self-care-container {
+    background-color: var(--orange-self-care);
+}
+
+.icon {
+    height: auto;
+    position: absolute;
+    right: 5%;
+    top: -0.6em;
+}
+
+/* MEDIA TABLET */
+@media(max-width:1150px) {
+    .grid {
+        z-index: 2;
+        margin-top: 5em;
+        grid-template-columns: 1fr;
+        width: 30em;
+        gap: 1em;
+    }
+
+    .box {
+       overflow:initial;
+        aspect-ratio: 1.8/1;
+    }
+
+    #user-box {
+        aspect-ratio: 1.4/1;
+        grid-row: span 1;
+    }
+
+    .box-content {
+        height: 75%;
+    }
+}
+
+/* MEDIA MOBILE*/
+@media(max-width:600px) {
+    body {
+        justify-content: start;
+    }
+
+    .grid {
+        margin: 1em auto;
+        width: 80vw;
+    }
+
+    .box {
+        aspect-ratio: 2.3/1;
+    }
+
+    #user-box {
+        aspect-ratio: 1.7/1;
+    }
+}
