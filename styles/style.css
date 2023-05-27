@@ -109,7 +109,7 @@ body {
 .upper-user-box {
     display: flex;
     justify-content: center;
-    height: 65%;
+    height: 70%;
     width: 100%;
     border-radius: 1em;
     background-color: var(--blue);
@@ -143,8 +143,27 @@ body {
 
 /* time span picking section */
 .lower-user-box {
-    width: 100%;
+    margin-left: 1em;
+    width: 50%;
+    display: inline-block;
 }
+
+.period-selector-btn {
+    text-align: start;
+    width: 100%;
+    font-size: 1.1em;
+    margin-top: 1.3em;
+    background-color: transparent;
+    border: none;
+    font-weight: 300;
+    color: var(--pale-blue);
+}
+
+.period-selector-btn:hover,
+:focus {
+    color: #fff;
+}
+
 
 /* COMMON BOXES CUSTOMIZATION */
 .box-content {
@@ -257,16 +276,31 @@ body {
     }
 
     #report-text {
-        margin-top: clamp(2.5em, 1em,5em);
+        margin-top: clamp(2.5em, 1em, 5em);
         font-size: clamp(1.2em, 4vw, 2.8em);
         color: var(--pale-blue);
     }
 
     #user-name {
-        font-size:clamp(1.7em, 4vw, 3.5em);
+        font-size: clamp(1.7em, 4vw, 3.5em);
         font-weight: 300;
         letter-spacing: 1px;
         color: #fff;
+    }
+
+    .lower-user-box {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        aspect-ratio: 3.9/1;
+        width: 100%;
+        font-size:clamp(1em,3.5vw,2em);
+    }
+
+    .period-selector-btn {
+        text-align: center;
+        margin: 0;
     }
 }
 
@@ -292,22 +326,22 @@ body {
 
     #report-text {
         margin-top: 3.4em;
-        font-size:1em;
+        font-size: 1em;
     }
 
     #user-name {
-        font-size:1.3em;
+        font-size: 1.3em;
     }
 }
 
 @media(max-width:400px) {
-   
+
     #report-text {
         margin-top: 3.2em;
-        font-size:1em;
+        font-size: 1em;
     }
 
     #user-name {
-        font-size:1.2em;
+        font-size: 1.2em;
     }
 }
